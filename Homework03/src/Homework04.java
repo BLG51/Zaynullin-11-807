@@ -21,7 +21,9 @@ public class Homework04 {
                 break;
             }
         }
-        if (i==n) {
+        if (up) {
+            System.out.println("Nope");
+        } else if (i==n) {
             System.out.println("Correct");
         }
     }
