@@ -12,10 +12,11 @@ public class Homework01 {
         //int[] arr2 = new int[m];
 
         /*  just in case: standart method
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < n-m+1; i++) {
+            k=i
             for (int j = 0; j < m; j++) {
-                if (i+m > n  || arr[i] != arr[j]) break;
-            }
+                if (arr[k] != arr2[j]) break;
+            } else k++
             if (j == m) //nice we did it remember i
             break;
         }

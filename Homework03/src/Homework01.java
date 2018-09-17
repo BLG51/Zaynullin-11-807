@@ -21,3 +21,4 @@ public class Homework01 {
         System.out.println(av +", " + s);
     }
 }
+
