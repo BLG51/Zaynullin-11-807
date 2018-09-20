@@ -5,7 +5,7 @@ public class Homework04 {
         Scanner sc = new Scanner(System.in);
         String s = sc.next();
         char[] arr = s.toCharArray();
-        System.out.println("Че каво u/l");
+        System.out.println("Выберите регистр u/l");
         String check = sc.next();
         switch (check) {
             case "u":
