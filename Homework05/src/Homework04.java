@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Homework04 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String s = sc.next();
+        String s = sc.nextLine();
         char[] arr = s.toCharArray();
         System.out.println("Выберите регистр u/l");
         String check = sc.next();
