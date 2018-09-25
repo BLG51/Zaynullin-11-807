@@ -9,9 +9,9 @@ public class Homework02 {
 
     public static String spaceDel(String s) {
         //return s.trim();
-        char[] arr = s.toCharArray();
+        //char[] arr = s.toCharArray();
         int i = 0;
-        while (arr[i] == ' ') {
+        while (s.charAt(i) == ' ') {
             i++;
         }
         return s.substring(i);
