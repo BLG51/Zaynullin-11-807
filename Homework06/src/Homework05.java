@@ -19,6 +19,7 @@ public class Homework05 {
     public static int uniqueCount(int[] arr, int[] arr2) {
         int k = 0;
         int j = 0;
+        // if(!Arrays.asList(arr2).contains(arr[i])) {k++};
         for (int i = 0; i < arr.length; i++) {
             for (j = 0; j < arr2.length; j++) {
                 if (arr[i] == arr2[j]) break;
