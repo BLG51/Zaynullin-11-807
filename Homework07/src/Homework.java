@@ -58,14 +58,13 @@ public class Homework {
 
     /**
      * H
-     * d=n/2
      */
     static boolean simpleCheck(int n) {
         return simple(n, n / 2);
     }
 
     static boolean simple(int n, int d) {
-        if (d == 1) return true;
+        if (d <= 1) return true;
         else if (n % d == 0) return false;
         else return simple(n, d - 1);
     }
