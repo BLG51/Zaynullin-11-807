@@ -5,6 +5,7 @@ public class Homework5 {
         Scanner sc = new Scanner(System.in);
         int n1, n2, m1, m2;
         do {
+            System.out.println("Впишите корректные размеры матриц");
             n1 = sc.nextInt();
             m1 = sc.nextInt();
             n2 = sc.nextInt();
