@@ -1,6 +1,6 @@
 import java.util.Arrays;
 import java.util.Scanner;
-
+//Вариант 1
 public class ClassTestTask01 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
