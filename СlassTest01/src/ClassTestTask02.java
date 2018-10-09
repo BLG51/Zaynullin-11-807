@@ -12,6 +12,7 @@ public class ClassTestTask02 {
                     break;
                 case '-':
                     sum -= s.charAt(i + 1) - 48;
+                    break;
             }
         }
         System.out.println(sum);
