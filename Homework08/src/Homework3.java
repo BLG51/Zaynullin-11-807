@@ -30,6 +30,30 @@ public class Homework3 {
                 matrix[i][j] = k;
             }
         }
+        //another approach
+        /*
+        for (int l = 0; l < n/2; l++) {
+            while (j + 1 < m-l) {
+                j++;
+                k++;
+                matrix[i][j] = k;
+            }
+            while (i + 1 < n-l) {
+                i++;
+                k++;
+                matrix[i][j] = k;
+            }
+            while (j - 1 > -1+l) {
+                j--;
+                k++;
+                matrix[i][j] = k;
+            }
+            while (i - 1 > -1+l) {
+                i--;
+                k++;
+                matrix[i][j] = k;
+            }
+        } */
         for (i = 0; i < n; i++) {
             System.out.println();
             for (j = 0; j < m; j++) {

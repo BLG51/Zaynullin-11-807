@@ -4,7 +4,7 @@ public class Homework6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int m = sc.nextInt();
+        int m = n;
         int c = (((n * m) - n) / 2) + n, i = 0, j = -1;
         //System.out.println(c);
         int[][] matrix = new int[n][m];
@@ -30,7 +30,8 @@ public class Homework6 {
         for (i = 0; i < n; i++) {
             System.out.println();
             for (j = 0; j < m; j++) {
-                System.out.print(matrix[i][j] + " ");
+                System.out.printf("%4d", matrix[i][j]);
+                //System.out.print(matrix[i][j] + "\t");
             }
 
         }
