@@ -10,18 +10,26 @@ public class SortAlf {
             sort(i);
             merge();
         }
+        for (int i = 0; i < 26; i++) {  //char i = 'a' can be used for ina.txt    ("a", "asd", "Asdsad") = String ... arr;
+            File f = new File(  "in" + i + ".txt");
+            if (f.exists()) f.delete();
+        }
     }
 
     static void merge() throws FileNotFoundException {
         PrintWriter pw = new PrintWriter(new File("in.txt"));
         Scanner[] scanners = new Scanner[26];
         for (int i = 0; i < 26; i++) {
+            //int + letter + .txt; (char) letter = i + 'a'
             scanners[i] = new Scanner(new File("in" + i + ".txt"));
         }
         for (int i = 0; i < 26; i++) {
             while (scanners[i].hasNext()) {
                 pw.println(scanners[i].next());
             }
+        }
+        for (Scanner sc : scanners) {
+            sc.close();
         }
         pw.close();
     }
@@ -34,12 +42,13 @@ public class SortAlf {
         }
         while (sc.hasNext()) {
             String n = sc.next();
-            int c = n.length()-1;
+            int c = n.length()-k-1;
+            /*int c = n.length()-1;
             for (int i = 0; i < k; i++) {
                 c--;
-            }
+            } */
             if (c < 0) c = 0;
-            int m = n.charAt(c) - 97;
+            int m = n.charAt(c) - 97;  //charAt(c)-'a'
             pws[m].println(n);
         }
         for (int i = 0; i < 26; i++) {
