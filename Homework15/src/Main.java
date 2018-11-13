@@ -17,12 +17,14 @@ public class Main {
         //Тоже вычисляем коэффициент, только сравниваем текст, хранящийся в двух файлах.
         //Текст в файлах точно такой же как при сравнении выше, поэтому результаты одинаковые
         File f1 = createFile("f1.txt", s1);
+        //File f1 = new File("f1.txt");
+        //File f2 = new File("f2.txt");
         File f2 = createFile("f2.txt", s2);
         double coef2 = a.analyze(new FileTextProvider(f1), new FileTextProvider(f2));
         double coef22 = b.analyze(new FileTextProvider(f1), new FileTextProvider(f2));
         System.out.println("Жаккард для содержимого файлов: " + coef2);
         System.out.println("Косинусная мера для содержимого файлов: " + coef22);
-        f1.delete(); f2.delete();
+        //f1.delete(); f2.delete();
     }
 
     //Method for testing only.
