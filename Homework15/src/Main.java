@@ -24,7 +24,8 @@ public class Main {
         double coef22 = b.analyze(new FileTextProvider(f1), new FileTextProvider(f2));
         System.out.println("Жаккард для содержимого файлов: " + coef2);
         System.out.println("Косинусная мера для содержимого файлов: " + coef22);
-        f1.delete(); f2.delete();
+        f1.delete();
+        f2.delete();
     }
 
     //Method for testing only.

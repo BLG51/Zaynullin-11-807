@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class AbstractTextAnalyzer implements TextAnalyzer{
+public abstract class AbstractTextAnalyzer implements TextAnalyzer {
     @Override
     abstract public double analyze(TextProvider te1, TextProvider te2);
 

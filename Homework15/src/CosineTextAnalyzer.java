@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class CosineTextAnalyzer extends AbstractTextAnalyzer{
+public class CosineTextAnalyzer extends AbstractTextAnalyzer {
     @Override
     public double analyze(TextProvider te1, TextProvider te2) {
         List<String> bag = tokenizeUnique(te1.getText() + " " + te2.getText());
@@ -9,7 +9,6 @@ public class CosineTextAnalyzer extends AbstractTextAnalyzer{
         List<String> list2 = tokenize(te2.getText());
         return cosineSimilarity(list1, list2, bag);
     }
-
 
     private List<String> tokenize(String text) {
         text = text.replace(",", "");
