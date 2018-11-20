@@ -2,16 +2,19 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class FileNameTextProvider extends AbstractFileTextProvider{
+public class FileNameTextProvider extends FileTextProvider {
+    private File input;
+
     public FileNameTextProvider(File input) {
         super(input);
+        this.input = input;
     }
 
     @Override
     public String getText() {
-        String fileName = input.getName();
-        String text = textToString(input);
-        return fileName + ": " + text;
+        String filename = input.getName();
+        String text = super.getText();
+        return filename = ": " + text;
     }
 
 }
