@@ -1,17 +1,18 @@
-import java.io.*;
-import java.util.Arrays;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class FileTextProvider implements TextProvider {
+public class FileNameTextProvider implements TextProvider {
     private static final int MAX_SYMBOLS_NUM = 100;
     private File input;
 
-    public FileTextProvider(File input) {
+    public FileNameTextProvider(File input) {
         this.input = input;
     }
 
     @Override
     public String getText() {
+        String fileName = input.getName();
         StringBuilder sb = new StringBuilder();
         Scanner sc = null;
         try {
@@ -26,13 +27,7 @@ public class FileTextProvider implements TextProvider {
                 sc.close();
             }
         }
-        return sb.toString();
-    }
-
-    public String getTextWithFileName() {
-        String text = getText();
-        String fileName = input.getName();
-        return fileName + ": " + text;
+        return fileName + ": " + sb.toString();
     }
 
     @Override
