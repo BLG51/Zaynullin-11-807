@@ -29,12 +29,6 @@ public class FileTextProvider implements TextProvider {
         return sb.toString();
     }
 
-    public String getTextWithFileName() {
-        String text = getText();
-        String fileName = input.getName();
-        return fileName + ": " + text;
-    }
-
     @Override
     public String toString() {
         String strToReturn;
