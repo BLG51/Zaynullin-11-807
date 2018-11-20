@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class FileTextProvider implements TextProvider {
     private static final int MAX_SYMBOLS_NUM = 100;
-    private File input;
+    protected File input;
 
     public FileTextProvider(File input) {
         this.input = input;
