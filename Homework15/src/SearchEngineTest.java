@@ -3,7 +3,7 @@ import java.util.List;
 
 public class SearchEngineTest {
     public static void main(String[] args) {
-        SearchEngine se = new SearchEngineImpl();
+        SearchEngine se = new SearchEngineImpl(new CosineTextAnalyzer());
         TextProvider query = new SimpleTextProvider("Мама мыла");
         TextProvider tp1 = new SimpleTextProvider("Мама мыла раму");
         TextProvider tp2 = new SimpleTextProvider("Мама раму мыла");
