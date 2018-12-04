@@ -61,6 +61,7 @@ public class IntArrayList implements IntList {
         for (int i = index; i < count-1; i++) {
         elements[i] = elements[i+1];
         }
+        count--;
     }
 
     @Override
