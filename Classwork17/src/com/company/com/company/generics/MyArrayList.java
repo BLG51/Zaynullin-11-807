@@ -82,9 +82,15 @@ public class MyArrayList<T> implements Iterable<T> {
         if (index < 0 || index >= list.size()) {
             throw new IllegalArgumentException("No such index");
         }
-        for (int i = index; i < list.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {
             add(list.get(i));
+
+            for (int j = size()-1; j< index; j--){
+            elements[j] = elements[j-1];
+            }
+            elements[index++] = list.get(i);
         }
+
     }
 
     public Iterator<T> iterator() {
