@@ -1,6 +1,8 @@
 package com.company.com.company;
 
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 public class GenericLinkedList <T> implements Iterable <T> {
     private Node<T> head;
@@ -59,10 +61,9 @@ public class GenericLinkedList <T> implements Iterable <T> {
     }
 
     public void addAll (GenericLinkedList<T> myLinkedList) {
-        Node<T> toadd = myLinkedList.head;
-        for (int i = 0; i < myLinkedList.size(); i++) {
-            add(toadd.getValue());
-            toadd = toadd.getNext();
+        T[] arr = myLinkedList.toArray();
+        for (int i = 0; i < arr.length; i++) {
+            add(arr[i]);
         }
     }
 
@@ -70,6 +71,8 @@ public class GenericLinkedList <T> implements Iterable <T> {
         if (index < 0 || index >= count) {
             throw new IndexOutOfBoundsException("Index: " + index + " вне границ");
         }
+        T[] arr = myLinkedList.toArray();
+        
         if (head != null) {
 
 
@@ -80,33 +83,29 @@ public class GenericLinkedList <T> implements Iterable <T> {
 
             Node<T> next = curr.getNext();
 
-            Node<T> toadd = myLinkedList.head;
-            for (int i = 0; i < myLinkedList.size(); i++) {
+            for (int i = 0; i < arr.length; i++) {
                 Node<T> newnode = new Node<>();
-                newnode.setValue(toadd.getValue());
+                newnode.setValue(arr[i]);
                 curr.setNext(newnode);
                 curr = curr.getNext();
-                toadd = toadd.getNext();
                 count++;
             }
             curr.setNext(next);
         }
         else {
             head = new Node<>();
-            Node<T> toadd = myLinkedList.head;
-            head.setValue(toadd.getValue()); count++;
-            toadd = toadd.getNext();
+            head.setValue(arr[1]); count++;
             Node<T> curr = head;
-            for (int i = 1; i < myLinkedList.size(); i++) {
+            for (int i = 2; i < arr.length; i++) {
                 Node<T> newnode = new Node<>();
-                newnode.setValue(toadd.getValue());
+                newnode.setValue(arr[i]);
                 curr.setNext(newnode);
                 curr = curr.getNext();
-                toadd = toadd.getNext();
                 count++;
             }
         }
     }
+    
 
     public void remove(int index) {
         if (index < 0 || index >= count) {
