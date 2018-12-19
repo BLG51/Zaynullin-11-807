@@ -19,7 +19,7 @@ public class Main {
 
         /*
         System.out.println("bregex testing here");
-        String text = "hello there [id5161|general kenobi] [id5161|professor]  fisting is [] three [sdw|hey] hundred ] b |] u [| cks";
+        String text = "hello there [id5161|general kenobi] [id5161|professor]  fishing is [] three [sdw|hey] hundred ] b |] u [| cks";
 
         Matcher matcher = Pattern.compile("\\[id[0-9]*\\|[^\\]]*]").matcher(text);
         while (matcher.find()){
