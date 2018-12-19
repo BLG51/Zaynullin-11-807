@@ -1,6 +1,8 @@
 package com.company.com.company;
 
 import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
 
@@ -14,5 +16,19 @@ public class Main {
         System.out.println(Arrays.toString(list2.toArray()));
         list1.addFromIndex(list2,2);
         System.out.println(Arrays.toString(list1.toArray()));
+
+        /*
+        System.out.println("bregex testing here");
+        String text = "hello there [id5161|general kenobi] [id5161|professor]  fisting is [] three [sdw|hey] hundred ] b |] u [| cks";
+
+        Matcher matcher = Pattern.compile("\\[id[0-9]*\\|[^\\]]*]").matcher(text);
+        while (matcher.find()){
+            String res = matcher.group();
+            String rep=res.substring(res.indexOf("|") +1 ,res.length()-1);
+            text = text.replace(res, rep);
+        }
+
+        System.out.println(text);
+        */
     }
 }
