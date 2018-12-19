@@ -40,7 +40,7 @@ public class MyArrayList<T> implements Iterable<T> {
     }
 
     //число элементов в списке
-    int size() {
+    public int size() {
         return count;
     }
 
@@ -79,14 +79,17 @@ public class MyArrayList<T> implements Iterable<T> {
     //добавление всех элементов из списка list в данный список
     //начиная с позиции index
     void addAll(MyArrayList<T> list, int index) {
-        if (index < 0 || index >= list.size()) {
+        if (index < 0 || index > list.size()) {
             throw new IllegalArgumentException("No such index");
+        }
+        if (index == size()) {
+            addAll(list);
+            return;
         }
         for (int i = 0; i < list.size(); i++) {
             add(list.get(i));
-
-            for (int j = size()-1; j< index; j--){
-            elements[j] = elements[j-1];
+            for (int j = size()-1; j > index; j--){
+                elements[j] = elements[j-1];
             }
             elements[index++] = list.get(i);
         }

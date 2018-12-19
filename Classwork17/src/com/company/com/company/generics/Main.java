@@ -1,27 +1,18 @@
 package com.company.com.company.generics;
 
+import java.util.Arrays;
 import java.util.Iterator;
 
 public class Main {
     public static void main(String[] args) {
-        MyArrayList<String> l = new MyArrayList<String>();
-        //l.add(5); не скомпилируется
-        l.add("abc");
-        l.add("qwerty");
-        l.add("xzcvxcv");
-        String s = l.get(0);
-        MyArrayList<Integer> l2 = new MyArrayList<>();
+        MyArrayList<Integer>  list1 = new MyArrayList<>();
+        MyArrayList<Integer> list2 = new MyArrayList<>();
+        list1.add(5); list1.add(6); list1.add(7);
 
-        //classic using iterator of MyArrayList
-        Iterator<String> iter = l.iterator();
-        while (iter.hasNext()) {
-            System.out.println(iter.next());
-        }
-
-        //foreach using iterator
-        for(String str : l) {
-            System.out.println(str.toUpperCase());
-        }
-
+        System.out.println(Arrays.toString(list1.toArray()));
+        list2.add(8); list2.add(9);
+        System.out.println(Arrays.toString(list2.toArray()));
+        list1.addAll(list2,1);
+        System.out.println(Arrays.toString(list1.toArray()));
     }
 }
