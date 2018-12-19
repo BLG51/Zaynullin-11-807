@@ -12,7 +12,7 @@ public class Main {
         System.out.println(Arrays.toString(list1.toArray()));
         list2.add(8); list2.add(9);
         System.out.println(Arrays.toString(list2.toArray()));
-        list1.addFromIndex(list2,0);
+        list1.addFromIndex(list2,2);
         System.out.println(Arrays.toString(list1.toArray()));
     }
 }
