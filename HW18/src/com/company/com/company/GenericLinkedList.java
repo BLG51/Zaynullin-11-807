@@ -68,12 +68,15 @@ public class GenericLinkedList <T> implements Iterable <T> {
     }
 
     public void addFromIndex (GenericLinkedList<T> myLinkedList, int index) {
-        if (index < 0 || index >= count) {
+        if (index < 0 || index > count) {
             throw new IndexOutOfBoundsException("Index: " + index + " вне границ");
         }
+        if (index == count) {
+        addAll(myLinkedList);
+        return;
+        }
         T[] arr = myLinkedList.toArray();
-        
-        if (head != null) {
+
 
 
             Node<T> curr = head;
@@ -91,19 +94,6 @@ public class GenericLinkedList <T> implements Iterable <T> {
                 count++;
             }
             curr.setNext(next);
-        }
-        else {
-            head = new Node<>();
-            head.setValue(arr[1]); count++;
-            Node<T> curr = head;
-            for (int i = 2; i < arr.length; i++) {
-                Node<T> newnode = new Node<>();
-                newnode.setValue(arr[i]);
-                curr.setNext(newnode);
-                curr = curr.getNext();
-                count++;
-            }
-        }
     }
     
 
