@@ -79,6 +79,7 @@ public class GenericLinkedList <T> implements Iterable <T> {
 
 
 
+
             Node<T> curr = head;
             for (int i = 0; i < index - 1; i++) {
                 curr = curr.getNext();

@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         GenericLinkedList<Integer>  list1 = new GenericLinkedList<>();
         GenericLinkedList<Integer> list2 = new GenericLinkedList<>();
         list1.add(5); list1.add(6); list1.add(7);
@@ -30,5 +30,11 @@ public class Main {
 
         System.out.println(text);
         */
+
+        System.out.println("btime check");
+        while (true) {
+        System.out.println(System.currentTimeMillis());
+        Thread.sleep(1000);
+        }
     }
 }
